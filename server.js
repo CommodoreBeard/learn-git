@@ -1,14 +1,16 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 
 const app = express();
+app.use(bodyParser.json())
 const port = 3000;
 
 app.get('/health', (req, res) => {
   res.send( { status: 'UP' } );
 });
 
-app.get('/greeting', (req, res) => {
-  const name = req.query.name;
+app.post('/greeting', (req, res) => {
+  const name = req.body.name;
   res.send( { message: `Hi, ${name}` } );
 });
 
