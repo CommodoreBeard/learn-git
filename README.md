@@ -1,5 +1,5 @@
 # learn-git
-playground for teaching git and github basics
+playground for teaching git and github basics. This will be a two part session.
 
 
 ## Topics
